@@ -3,23 +3,21 @@ document.addEventListener("DOMContentLoaded", function () {
     let usernameInput = document.getElementById("username");
     let message = document.getElementById("message");
 
-    // Function to teleport button
+    // Function to teleport button with animation
     function teleportButton() {
-        let randomX = Math.random() * (window.innerWidth - 120); // Random X
+        let randomX = Math.random() * (window.innerWidth - 150); // Random X
         let randomY = Math.random() * (window.innerHeight - 60); // Random Y
 
-        submitBtn.style.position = "absolute";
-        submitBtn.style.left = randomX + "px";
-        submitBtn.style.top = randomY + "px";
+        submitBtn.style.transform = `translate(${randomX}px, ${randomY}px)`;
     }
 
-    // Right-click par button teleport hoga
+    // Right-click pe teleport
     submitBtn.addEventListener("contextmenu", function (event) {
         event.preventDefault();
         teleportButton();
     });
 
-    // Hover karne par bhi button bhaag jayega
+    // Hover karne pe bhi teleport
     submitBtn.addEventListener("mouseover", function () {
         teleportButton();
     });
