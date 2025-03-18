@@ -1,4 +1,4 @@
-/* Dark Theme + Futuristic Glitch Effect */
+/* Dark Theme + Futuristic Effect */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 
 body {
@@ -9,7 +9,7 @@ body {
     overflow: hidden;
 }
 
-/* Animated Background */
+/* Background Animation */
 .background {
     position: absolute;
     width: 100%;
@@ -70,12 +70,13 @@ button {
     color: white;
     font-size: 20px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: transform 0.5s ease-in-out;
     position: absolute;
     border-radius: 5px;
     box-shadow: 0 0 10px #ff0044;
 }
 
+/* Button Hover */
 button:hover {
     background-color: #ff2266;
     box-shadow: 0 0 15px #ff2266;
